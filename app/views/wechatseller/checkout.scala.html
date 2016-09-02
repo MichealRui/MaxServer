@@ -1,0 +1,20 @@
+@(RemoteAssets: controllers.RemoteAssets, order: Html = Html("{}"))
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Boilerplate</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,target-densitydpi=device-dpi'>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link href="@RemoteAssets.at("common/font-awesome-4.5.0/css/font-awesome.css")" rel="stylesheet" type="text/css">
+    <link href="@RemoteAssets.at("common/flexible.css")" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+       window.Max=@order
+    </script>
+    <script src="@RemoteAssets.at("checkout/vendor.bundle.js")"></script>
+    <script src="@RemoteAssets.at("checkout/bundle-7980fb.js")"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+HEAD    /                           controllers.Index.health
+GET     /                           controllers.Index.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+GET     /checkin                    controllers.wechatseller.Seller.checkIn
+POST    /fetchitem                  controllers.wechatseller.Seller.testItemAction
+POST    /createorder                controllers.wechatseller.Seller.testOrderAction
+
+
+GET     /checkout                   controllers.wechatseller.Seller.checkOut
+POST    /getorderpayment               controllers.wechatseller.Seller.testOrderPayment
+
+GET     /orderlist                  controllers.wechatseller.Seller.sellerOrderList
+POST    /getorderlist               controllers.wechatseller.Seller.testOrderList
+
+GET     /orderdetail                controllers.wechatseller.Seller.sellerOrderDetail
+POST    /getorderdetail             controllers.wechatseller.Seller.testOrderDetail
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
